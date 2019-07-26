@@ -12,6 +12,9 @@ class Worker(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        reverse('tools_list', args=[{'slug': self.slug}])
+
 
 class Tools(models.Model):
     name = models.CharField(max_length=50)

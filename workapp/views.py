@@ -13,8 +13,8 @@ class WorkersListView(generic.ListView):
     template_name = 'workapp/index.html'
 
 
-class WorkerDetailView(generic.ListView):
-    queryset = Tools.objects.all()
+class WorkerDetailView(generic.DetailView): #используй DetailView если хочешь отобразить инфу по одному работнику
+    model = Worker
     template_name = 'workapp/tools_list.html'
 
 
