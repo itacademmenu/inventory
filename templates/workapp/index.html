@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="nav-right">
+        <a href="{% url 'worker_create' %}">+ Worker Create</a>
+    </div>
+    <div class="nav-left">
+            <a href="{% url 'tool_create' %}">+ Tools Create</a>
+    </div>
+    {% for object in object_list %}
+    <div class="post-entry">
+        <p><a href="{% url 'tools_list' slug=object.slug  %}"> {{ object.name }}</a></p>
+    </div>
+    {% endfor %}
+
+{% endblock %}

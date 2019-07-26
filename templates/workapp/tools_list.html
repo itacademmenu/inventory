@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ object_list }}
+    {% for object in object_list %}
+         <p class="card-text">{{ object.tools }}</p>
+        <p class="card-text">{{ object.tools.inv_number }}</p>
+        <p class="card-text">{{ object.tools.cost }}</p>
+
+    {% endfor %}
+
+{% endblock %}
